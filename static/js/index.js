@@ -76,3 +76,25 @@ $(document).ready(function() {
     bulmaSlider.attach();
 
 })
+
+document.querySelectorAll(".example_lst li").forEach(e => {
+  e.addEventListener("click", Click_1)
+})
+
+function Click_1(eve) {
+  const iTxt = eve.srcElement.innerText
+  for (let v of document.querySelectorAll(".example_lst a")) {
+    if (iTxt === v.innerText) {
+      v.parentElement.className = "is-active";
+    } else {
+      v.parentElement.className = "";
+    }
+  }
+  for (let block of document.getElementsByClassName('lib_examples')) {
+    block.style.display = (block.title === iTxt) ? 'block' : 'none';
+  }
+}
+
+
+
+

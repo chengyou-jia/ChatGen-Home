@@ -6,7 +6,7 @@
         content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>ChatGen: Automatic Text-to-Image Generation From FreeStyle Chatting</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -32,7 +32,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="icon" href="./static/images/android-chrome-512x512.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -42,212 +42,180 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://keunhong.com">
+        <span class="icon">
+            <i class="fas fa-home"></i>
+        </span>
         </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
           </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav>
-
-
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
-            </span>
-          </div>
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
-          </div>
-
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
-            </div>
-
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://arxiv.org/abs/2404.01342">
+              DiffAgent
+            </a>
+            <a class="navbar-item" href="https://arxiv.org/abs/2410.18603">
+              AgentStore
+            </a>
           </div>
         </div>
       </div>
+  
     </div>
-  </div>
-</section>
+  </nav>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
+
+  <section class="hero">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">
+              <img src="./static/images/android-chrome-512x512.png" width="90" alt="ChatGen" />
+              <br>
+              ChatGen: Automatic Text-to-Image Generation From FreeStyle Chatting
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://chengyou-jia.github.io/">Chengyou Jia</a><sup>1,*</sup>,</span>
+              <span class="author-block">
+                <a href="#">Changliang Xia</a><sup>1,*</sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=8qX4Z5IAAAAJ">Zhuohang Dang</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://weijiawu.github.io/">Weijia Wu</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://hangwei12358.github.io/">Hangwei Qian</a><sup>3</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?hl=en&user=C3ujEF0AAAAJ">Minnan Luo</a><sup>1,†</sup>
+              </span>
+            </div>
+  
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Xi'an Jiaotong University</span>
+              <span class="author-block"><sup>2</sup>National University of Singapore</span>
+              <span class="author-block"><sup>3</sup>CFAR, A*STAR</span>
+              <br>
+              <span class="eql-cntrb"><small><sup>*</sup>Equal Contribution.</small></span>
+              <span class="eql-cntrb"><small><sup>†</sup>Corresponding Author.</small></span>
+            </div>
+  
+
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2411.17176"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2411.17176"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+  
+                <span class="link-block">
+                  <a href="https://github.com/chengyou-jia/ChatGen"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://huggingface.co/collections/ChengyouJia/chatgen-6744724ae834402b5b69037b" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                          🤗
+                      </span>
+                      <span>267K DATA</span>
+                  </a>
+              </span>
+
+
+              <span class="link-block">
+                <a href="https://huggingface.co/collections/ChengyouJia/chatgen-6744724ae834402b5b69037b" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        🤗
+                    </span>
+                    <span>Models</span>
+                </a>
+            </span>
+          </div>
+          <span class="eql-cntrb"><b>(Stay tuned for upcoming website upgrades and the open-sourcing of our code!)</b></span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
+<section class="section" style="margin: -3rem 0; padding: 1rem 0;">
+  <div class="container is-max-desktop">
+    <!-- Environment Infrastructure. -->
+    <div class="content has-text-justified">
+      <img src="static/images/case_step.png" width="100%" alt="" class="responsive-image">
+      <img src="static/images/case_dall1.png" width="100%" alt="" class="responsive-image">
+    </div>
+    <!--/ Environment Infrastructure. -->
+  </div>
+</section>
 
-<section class="hero is-light is-small">
+
+
+<!-- <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
+          <img src="static/images/case1.png" alt="ap-clip" />
         </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
+        <div class="item item-steve">
+          <img src="static/images/case2.png" alt="ap-clip" />
         </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
+        <div class="item item-steve">
+          <img src="static/images/case3.png" alt="ap-clip" />
         </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
+        <div class="item item-steve">
+          <img src="static/images/case4.png" alt="ap-clip" />
         </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
+        <div class="item item-steve">
+          <img src="static/images/case5.png" alt="ap-clip" />
         </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
+        <div class="item item-steve">
+          <img src="static/images/case6.png" alt="ap-clip" />
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <section class="section">
@@ -258,198 +226,234 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
-          </p>
+          Despite the significant advancements in text-to-image (T2I) generative models, users often face a trial-and-error challenge in practical scenarios.
+           This challenge arises from the complexity and uncertainty of tedious steps such as crafting suitable prompts, selecting appropriate models, and 
+           configuring specific arguments, making users resort to labor-intensive attempts for desired images. This paper proposes Automatic T2I generation,
+            which aims to automate these tedious steps, allowing users to simply describe their needs in a freestyle chatting way. To systematically study this problem, 
+            we first introduce ChatGenBench, a novel benchmark designed for Automatic T2I. It features high-quality paired data with diverse freestyle inputs, enabling 
+            comprehensive evaluation of automatic T2I models across all steps. Additionally, recognizing Automatic T2I as a complex multi-step reasoning task, 
+            we propose ChatGen-Evo, a multi-stage evolution strategy that progressively equips models with essential automation skills. 
+            Through extensive evaluation across step-wise accuracy and image quality, ChatGen-Evo significantly enhances performance over various baselines. 
+            Our evaluation also uncovers valuable insights for advancing automatic T2I.
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
 
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
+    <section class="section">
+      <div class="container is-max-desktop">
+        <!-- Environment Infrastructure. -->
+        <h2 class="title is-3 has-text-centered">Benchmark</h2>
         <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
+          <img src="static/images/dataset.png" width="100%" alt="" class="responsive-image">
+          <md-block>We introduce <strong>ChatGenBench</strong>, a benchmark specifically designed for Automatic T2I.
+            It includes a comprehensive step-by-step trail for step-wise evaluation, supporting multimodal or historical user inputs.</md-block>
         </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
+        <!--/ Environment Infrastructure. -->
+      </div>
+    </section>
+
+
+    <section>
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Leaderboard</h2>
+      </div>
+      <div class="cover has-text-centered" id="contentCover">
+        <div class="container-t">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="infoCard">
+                <div class="infoBody">
+                  <!-- Tabs for the two options -->
+                  <div class="tabs is-centered example_lst">
+                    <ul>
+                      <li class="is-active"><a title="Step-wise">Step-wise</a></li>
+                      <li><a title="Image Quality">Image Quality</a></li>
+                    </ul>
+                  </div>
+                  <!-- JavaScript logic for tabs -->
+                  <script type="text/javascript">
+                    document.querySelectorAll(".example_lst li").forEach(e => {
+                      e.addEventListener("click", Click_1);
+                    });
+    
+                    function Click_1(eve) {
+                      const iTxt = eve.target.innerText;
+                      document.querySelectorAll(".example_lst li").forEach(item => {
+                        item.className = item.innerText === iTxt ? "is-active" : "";
+                      });
+                      document.querySelectorAll(".lib_examples").forEach(block => {
+                        block.style.display = block.title === iTxt ? "block" : "none";
+                      });
+                    }
+                  </script>
+                  <!-- Content for "A11y tree" -->
+                  <div title="Step-wise" class="lib_examples" id="BoardPanel1" style="display: block;">
+                    <table class="table performanceTable">
+                      <tr>
+                        <th>Rank</th>
+                        <th>Model</th>
+                        <th>Prompt Score</th>
+                        <th>Selection Acc </th>
+                        <th>Argument Acc </th>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>ChatGen-Evo-2B</td>
+                        <td>0.247</td>
+                        <td>0.328</td>
+                        <td>0.537</td>                        
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>ChatGen-Base-8B</td>
+                        <td>0.208</td>
+                        <td>0.264</td>
+                        <td>0.509</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>ChatGen-Base-4B</td>
+                        <td>0.197</td>
+                        <td>0.230</td>
+                        <td>0.490</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>ChatGen-Base-2B</td>
+                        <td>0.184</td>
+                        <td>0.206</td>
+                        <td>0.384</td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>Baseline</td>
+                        <td>0.026</td>
+                        <td>-</td>
+                        <td>-</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <!-- Content for "Screenshot" -->
+                  <div title="Image Quality" class="lib_examples" id="BoardPanel2" style="display: none;">
+                    <table class="table performanceTable">
+                      <tr>
+                        <th>Rank</th>
+                        <th>Model</th>
+                        <th>FID Score</th>
+                        <th>CLIP Score</th>
+                        <th>HPSv2 </th>
+                        <th>Imgae Reward</th>
+                        <th>Unified Score</th>
+
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>ChatGen-Evo-2B</td>
+                        <td>19.1</td>
+                        <td>72.9</td>
+                        <td>25.1</td>
+                        <td>8.9</td>
+                        <td>65.9</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>ChatGen-Base-8B</td>
+                        <td>20.8</td>
+                        <td>70.7</td>
+                        <td>23.9</td>
+                        <td>4.0</td>
+                        <td>60.7</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>ChatGen-Base-4B</td>
+                        <td>21.3</td>
+                        <td>69.9</td>
+                        <td>23.5</td>
+                        <td>2.4</td>
+                        <td>59.0</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>ChatGen-Base-2B</td>
+                        <td>20.7</td>
+                        <td>70.0</td>
+                        <td>23.4</td>
+                        <td>1.5</td>
+                        <td>58.7</td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>Baseline</td>
+                        <td>32.7</td>
+                        <td>64.6</td>
+                        <td>20.2</td>
+                        <td>-34.6</td>
+                        <td>37.3</td>
+                      </tr>
+                      
+                      
+                    </table>
+                  </div>
+                </div>
+              </div>
             </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
           </div>
         </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
       </div>
-    </div>
-    <!--/ Animation. -->
+    </section>
+    
+    
+    
 
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
+    <section class="section">
+      <div class="container is-max-desktop">
+        <!-- Environment Infrastructure. -->
+        <h2 class="title is-3 has-text-centered">Methods</h2>
         <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
+          <img src="static/images/overview.png" width="100%" alt="" class="responsive-image">
+          <md-block>We present <strong>ChatGenEvo</strong>, which adopts a multi-stage evolution strategy. By decomposing the task into distinct stages, ChatGen-Evo enables the model to progressively acquire essential Automatic T2I capabilities.</md-block>
         </div>
+        <!--/ Environment Infrastructure. -->
       </div>
-    </div>
-    <!--/ Concurrent Work. -->
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <!-- Environment Infrastructure. -->
+        <h2 class="title is-3 has-text-centered">Visualizations</h2>
+        <div class="content has-text-justified">
+          <img src="static/images/case_step2.png" width="100%" alt="" class="responsive-image">
+          <img src="static/images/case_step3.png" width="100%" alt="" class="responsive-image">
+          <img src="static/images/case_step4.png" width="100%" alt="" class="responsive-image">
+          <img src="static/images/case_step5.png" width="100%" alt="" class="responsive-image">
+          <!-- <img src="static/images/case_dall2.png" width="100%" alt="" class="responsive-image"> -->
+
+
+
+        </div>
+        <!--/ Environment Infrastructure. -->
+      </div>
+    </section>
+
+
 
   </div>
 </section>
+
 
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre>
+    <pre><code>@article{jia2024chatgen, 
+  title={ChatGen: Automatic Text-to-Image Generation From FreeStyle Chatting}, 
+  author={Jia, Chengyou and Xia, Changliang and Dang, Zhuohang and Wu, Weijia and Qian, Hangwei and Luo, Minnan}, 
+  journal={arXiv preprint arXiv:2411.17176}, 
+  year={2024}
+}
+</code></pre>
   </div>
 </section>
 
